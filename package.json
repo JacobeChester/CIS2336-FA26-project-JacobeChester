@@ -1,0 +1,13 @@
+{
+  "name": "uh-sugar-land-student-center",
+  "version": "1.0.0",
+  "description": "UH Sugar Land Student Center website (CIS 2336 individual project)",
+  "main": "backend/app.js",
+  "private": true,
+  "scripts": {
+    "start": "node backend/app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

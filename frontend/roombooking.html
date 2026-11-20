@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a room | UH Sugar Land Student Center</title>
+  <meta name="description" content="Reserve a room at the UH Sugar Land Student Center.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="booking">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">UH</span>
+        <span>Student Center<small>University of Houston at Sugar Land</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <!-- The menu links are built by script.js (see NAV_ITEMS). The noscript list is a fallback. -->
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <noscript>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="roombooking.html">Book a room</a></li>
+            <li><a href="reference.html">References</a></li>
+          </ul>
+        </noscript>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <h1>Book a room</h1>
+        <p>Rooms are open 8:00 AM to 10:00 PM. Required fields are marked with an asterisk (*).</p>
+      </div>
+    </div>
+
+    <div class="wrap booking-grid">
+      <div>
+        <div id="result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+
+        <form id="booking-form" novalidate>
+          <div class="form-row two">
+            <div class="field">
+              <label for="name">Full name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" maxlength="60" required aria-describedby="name-error">
+              <p class="error-msg" id="name-error"></p>
+            </div>
+            <div class="field">
+              <label for="email">UH email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-hint email-error">
+              <span class="hint" id="email-hint">For example, name@cougarnet.uh.edu</span>
+              <p class="error-msg" id="email-error"></p>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div class="field">
+              <label for="room">Room *</label>
+              <select id="room" name="room" required aria-describedby="room-error">
+                <option value="">Choose a room</option>
+                <option value="pod" data-capacity="4">Study Pod 101 (seats 4)</option>
+                <option value="studio" data-capacity="8">Collab Studio 102 (seats 8)</option>
+                <option value="media" data-capacity="6">Media Room 201 (seats 6)</option>
+                <option value="esports" data-capacity="12">Esports Lounge 202 (seats 12)</option>
+                <option value="hall" data-capacity="40">Event Hall 301 (seats 40)</option>
+              </select>
+              <p class="error-msg" id="room-error"></p>
+            </div>
+            <div class="field">
+              <label for="date">Date *</label>
+              <input id="date" name="date" type="date" required aria-describedby="date-error">
+              <p class="error-msg" id="date-error"></p>
+            </div>
+          </div>
+
+          <div class="form-row three">
+            <div class="field">
+              <label for="start">Start time *</label>
+              <select id="start" name="start" required aria-describedby="start-error">
+                <option value="">Choose a time</option>
+              </select>
+              <p class="error-msg" id="start-error"></p>
+            </div>
+            <div class="field">
+              <label for="duration">Length *</label>
+              <select id="duration" name="duration" required aria-describedby="duration-error">
+                <option value="">Choose a length</option>
+                <option value="30">30 minutes</option>
+                <option value="60">1 hour</option>
+                <option value="90">1.5 hours</option>
+                <option value="120">2 hours</option>
+                <option value="150">2.5 hours</option>
+                <option value="180">3 hours</option>
+              </select>
+              <p class="error-msg" id="duration-error"></p>
+            </div>
+            <div class="field">
+              <label for="attendees">People *</label>
+              <input id="attendees" name="attendees" type="number" min="1" step="1" inputmode="numeric" required aria-describedby="attendees-error">
+              <p class="error-msg" id="attendees-error"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="purpose">Purpose <span class="hint">Optional, up to 200 characters</span></label>
+            <textarea id="purpose" name="purpose" maxlength="200" aria-describedby="purpose-error"></textarea>
+            <p class="error-msg" id="purpose-error"></p>
+          </div>
+
+          <button class="btn" type="submit" id="submit-btn">Reserve room</button>
+        </form>
+      </div>
+
+      <aside class="side-panel" aria-labelledby="avail-title">
+        <h2 id="avail-title">Room availability</h2>
+        <div id="availability" aria-live="polite">
+          <p class="room-info">Choose a room and a date to see what is already booked.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>CIS 2336 individual project, Fall 2026. A class project for a fictional student center; it is not an official University of Houston website.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

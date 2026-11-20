@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UH Sugar Land Student Center</title>
+  <meta name="description" content="Reserve study rooms, a media room, an esports lounge, and an event hall at the new UH Sugar Land Student Center.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">UH</span>
+        <span>Student Center<small>University of Houston at Sugar Land</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <!-- The menu links are built by script.js (see NAV_ITEMS). The noscript list is a fallback. -->
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <noscript>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="roombooking.html">Book a room</a></li>
+            <li><a href="reference.html">References</a></li>
+          </ul>
+        </noscript>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Reserve a room at the new Student Center</h1>
+          <p>Five rooms for study groups, media projects, gaming, and club events at UH Sugar Land. Pick a room, choose a time, and get an answer right away.</p>
+          <div class="hero-actions">
+            <a class="btn" href="roombooking.html">Book a room</a>
+            <a class="btn btn-quiet" href="FAQ.html">Read the FAQ</a>
+          </div>
+        </div>
+
+        <section class="plan" aria-labelledby="plan-title">
+          <h2 class="plan-title" id="plan-title">Floor plan</h2>
+          <p class="plan-note" id="plan-note">Select a room to start a booking. Availability is for today.</p>
+          <div class="plan-grid">
+            <a class="room-tile" data-room="pod" href="roombooking.html?room=pod">
+              <span class="room-name">Study Pod 101</span>
+              <span class="room-meta">Seats 4</span>
+              <span class="room-status" data-status>Checking availability</span>
+            </a>
+            <a class="room-tile" data-room="studio" href="roombooking.html?room=studio">
+              <span class="room-name">Collab Studio 102</span>
+              <span class="room-meta">Seats 8</span>
+              <span class="room-status" data-status>Checking availability</span>
+            </a>
+            <a class="room-tile" data-room="media" href="roombooking.html?room=media">
+              <span class="room-name">Media Room 201</span>
+              <span class="room-meta">Seats 6 &middot; green screen</span>
+              <span class="room-status" data-status>Checking availability</span>
+            </a>
+            <a class="room-tile" data-room="esports" href="roombooking.html?room=esports">
+              <span class="room-name">Esports Lounge 202</span>
+              <span class="room-meta">Seats 12</span>
+              <span class="room-status" data-status>Checking availability</span>
+            </a>
+            <a class="room-tile" data-room="hall" href="roombooking.html?room=hall">
+              <span class="room-name">Event Hall 301</span>
+              <span class="room-meta">Seats 40</span>
+              <span class="room-status" data-status>Checking availability</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="wrap">
+        <h2 id="how-title">How booking works</h2>
+        <ol class="steps">
+          <li>
+            <div>
+              <h3>Choose a room and time</h3>
+              <p>The booking page shows what is already reserved for the day you pick.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Send your request</h3>
+              <p>The server checks the room for conflicts as soon as you submit the form.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Get a confirmation or a decline</h3>
+              <p>If the slot is taken, the decline lists the times that are already booked so you can try another.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section-alt" aria-labelledby="video-title">
+      <div class="wrap video-grid">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/-gdAoQol0xE" title="The College Tour: University of Houston" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+          <h2 id="video-title">See student life at UH</h2>
+          <p>Ten UH students share what college is like in The College Tour. The video is hosted on YouTube and embedded here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contact-title" id="developer-contact">
+      <div class="wrap">
+        <h2 id="contact-title">Developer Contact</h2>
+        <div class="contact-card">
+          <dl>
+            <dt>Name</dt>
+            <dd>Jacobe Chester</dd>
+            <dt>UH email</dt>
+            <dd><a href="mailto:jccheste@cougarnet.uh.edu">jccheste@cougarnet.uh.edu</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>CIS 2336 individual project, Fall 2026. A class project for a fictional student center; it is not an official University of Houston website.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
